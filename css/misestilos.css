@@ -1,0 +1,228 @@
+/* ESTILOS BÁSICOS*/
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.6rem;
+	--color-fondo1: #285f85;
+	--color-fondo2: #97a2aa;
+	--color-fondo-input: rgba(199, 199, 228, 0.406);
+	--color-boton: rgba(255, 60, 46, 0.959);
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 2rem;
+	color: var(--color-fondo1);
+}
+
+/* ESTILOS PARA EL BODY */
+body {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* ESTILOS PARA LA CABECERA Y EL PIE */
+header,
+footer {
+	width: 100vw;
+	height: 100vh;
+	max-height: 4rem;
+	padding: 1rem 0;
+	background: var(--color-fondo1);
+	/* color de fondo navegadores antiguos */
+	background: -webkit-linear-gradient(to right, #285f85, #97a2aa);
+	background: -o-linear-gradient(to right, #285f85, #97a2aa);
+	background: -moz-linear-gradient(to right, #285f85, #97a2aa);
+	background: linear-gradient(
+		to right,
+		var(--color-fondo1),
+		var(--color-fondo2)
+	);
+
+	display: flex;
+	justify-content: center;
+	color: white;
+}
+
+/* ESTILOS PARA EL MAIN */
+main {
+	margin: 0 auto;
+	width: 80vw;
+	height: auto;
+	padding: 1rem 0;
+	flex: 2 1 auto; /* Así mandamos el pie al final de la pantalla */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.contenedor {
+	width: max-content;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+
+/* ESTILOS DEL FORMULARIO */
+form {
+	width: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 1 rem;
+	padding: 0.5rem 1rem;
+}
+
+fieldset {
+	padding: 1rem;
+	gap: 0.5rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.campo {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+label {
+	width: 100px;
+}
+
+input {
+	border: none;
+	outline: 1px solid #666;
+	border-radius: 5px;
+	padding: 0.25rem;
+}
+
+input[type="radio"] {
+	outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+	width: 200px;
+}
+
+input[type="date"] {
+	height: max-content;
+}
+
+.campoRadio {
+	display: flex;
+	justify-content: left;
+	gap: 3rem;
+}
+
+.campoRadio label {
+	width: max-content;
+	margin-right: 0.2rem;
+}
+
+.centrado {
+	margin: 0 auto;
+	margin-bottom: 1.5rem;
+}
+
+.boton {
+	font-size: 1.2rem;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	color: white;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 3px 4px 3px #666;
+	margin-top: 1.5rem;
+	transition: all 0.25s linear;
+}
+
+#add {
+	background-color: var(--color-fondo1);
+	border-color: var(--color-fondo1);
+}
+
+#limpiar {
+	background-color: var(--color-boton);
+	border-color: var(--color-boton);
+}
+
+#add:hover {
+	background-color: white;
+	border-color: #285f85;
+	color: var(--color-fondo1);
+}
+
+#limpiar:hover {
+	background-color: white;
+	border-color: var(--color-boton);
+	color: var(--color-boton);
+}
+
+input:required {
+	background-color: rgba(255, 166, 0, 0.171);
+}
+
+input:focus {
+	outline-color: var(--color-fondo1);
+	background-color: var(--color-fondo-input);
+}
+
+input:focus:valid {
+	outline-color: green;
+}
+
+input:focus:not(valid) {
+	outline-color: red;
+}
+
+table {
+	border-collapse: collapse;
+	min-width: 400px;
+	box-shadow: 5px 5px rgba(0, 0, 0, 0.15);
+	margin-top: 10px;
+	border: 1px solid #ddd;
+	cursor: hand;
+}
+
+th {
+	background-color: midnightblue;
+}
+
+th,
+td {
+	padding: 15px 20px;
+	border: 1px solid #ddd;
+	color: black;
+}
+
+th {
+	color: white;
+}
+
+tr:nth-child(odd) {
+	background-color: #f3f3f3;
+}
+
+tr:last-child {
+	border-bottom: 2px solid midnightblue;
+}
