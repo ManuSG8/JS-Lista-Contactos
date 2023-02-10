@@ -1,1 +1,1 @@
-Este ejercicio está resuelto utilizando diferentes modos de hacerlo
+Este ejercicio está resuelto utilizando diferentes modos de resolverlo
